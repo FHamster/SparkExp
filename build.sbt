@@ -13,5 +13,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % "2.4.4" ,
   "org.apache.spark" %% "spark-sql" % "2.4.4" ,
   "org.scala-lang" % "scala-library" % scalaVersion.value,
-  "com.databricks" %% "spark-xml" % "0.8.0"
+  "com.databricks" %% "spark-xml" % "0.8.0",
+//   https://mvnrepository.com/artifact/mysql/mysql-connector-java
+  "mysql" % "mysql-connector-java" % "8.0.19"
 )
