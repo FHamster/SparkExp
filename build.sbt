@@ -2,7 +2,7 @@ name := "SparkExp"
 
 version := "0.1"
 
-scalaVersion := "2.11.12"
+scalaVersion := "2.13.11"
 
 libraryDependencies ++= Seq(
   "commons-io" % "commons-io" % "2.6",
