@@ -9,8 +9,8 @@ scalaVersion := "2.11.12"
 //logLevel := Level.Debug
 
 resolvers ++= Seq(
-//  ("aliyun" at "http://maven.aliyun.com/nexus/content/groups/public").withAllowInsecureProtocol(allowInsecureProtocol = true)
-//  ("aliyun" at "https://maven.aliyun.com/repository/central")
+  //  ("aliyun" at "http://maven.aliyun.com/nexus/content/groups/public").withAllowInsecureProtocol(allowInsecureProtocol = true)
+  //  ("aliyun" at "https://maven.aliyun.com/repository/central")
 )
 
 libraryDependencies ++= Seq(
@@ -23,6 +23,6 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % "2.4.4" withSources() withJavadoc(),
   "org.scala-lang" % "scala-library" % scalaVersion.value,
   "com.databricks" %% "spark-xml" % "0.8.0" withSources() withJavadoc(),
-  //   https://mvnrepository.com/artifact/mysql/mysql-connector-java
-  "mysql" % "mysql-connector-java" % "8.0.19"
+  // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+  "mysql" % "mysql-connector-java" % "5.1.48"
 )
