@@ -31,20 +31,20 @@ root
 """
  */
 //做的一些测试
-final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
-//  val testRes: String = "src/test/resources/article_after.xml"
-  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
+final class ClusterTest extends FunSuite with BeforeAndAfterAll {
+  val testRes: String = "src/test/resources/article_after.xml"
+//  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
-      .master("local[*]")
+      .master("spark://localhost:7077")
       .appName("DBLPTest")
-      .config("spark.ui.enabled", value = false)
       .getOrCreate()
   }
 
   private lazy val dblpArticle: DataFrame = {
     import com.databricks.spark.xml._
+
     spark.read
       .option("rootTag", "dblp")
       .option("rowTag", "article")
@@ -70,6 +70,10 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
     }
   }
 
+  test("1"){
+    spark.sparkContext.textFile("src/test/resources/article_after.xml").count()
+//    spark.read.textFile().show()
+  }
   test("show article dataframe") {
     dblpArticle.printSchema()
     dblpArticle.show()
