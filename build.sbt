@@ -21,7 +21,8 @@ libraryDependencies ++= Seq(
   "com.databricks" %% "spark-xml" % "0.8.0" withSources(),
   // https://mvnrepository.com/artifact/mysql/mysql-connector-java
   "mysql" % "mysql-connector-java" % "5.1.48",
-  "org.mongodb.spark" %% "mongo-spark-connector" % "2.4.4",
-  "org.apache.spark" %% "spark-core" % "2.4.4",
-  "org.apache.spark" %% "spark-sql" % "2.4.4"
+  "org.mongodb.spark" %% "mongo-spark-connector" % "2.4.0",
+  "org.apache.spark" %% "spark-core" % "2.4.0",
+  "org.apache.spark" %% "spark-sql" % "2.4.0",
+  //"org.scalatest" %% "scalatest" % "3.1.1"
 )
