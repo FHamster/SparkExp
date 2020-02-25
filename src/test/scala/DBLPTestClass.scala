@@ -1,6 +1,7 @@
 import java.nio.file.Path
 import java.util.Properties
 
+import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.StructField
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
@@ -32,8 +33,8 @@ root
  */
 //做的一些测试
 final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
-//  val testRes: String = "src/test/resources/article_after.xml"
-  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
+  val testRes: String = "src/test/resources/article_after.xml"
+//  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
@@ -74,6 +75,7 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
     dblpArticle.printSchema()
     dblpArticle.show()
 
+//    RDD
     //    dblpArticle.
   }
 
@@ -171,8 +173,7 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
       .filter(array_contains($"author._VALUE", "Paul Kocher"))
       .cache()
 
-    cache.write
-      .json("Testjson")
+//    cache.write.json("Testjson")
   }
 
   test("write jdbc") {
@@ -187,7 +188,7 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
     properties.put("user", "root")
     properties.put("password", "Gaoxin459716010@163")
 
-    cache.write.jdbc(url = "jdbc:mysql://114.116.39.130:3306/dblp", table = "dblp", connectionProperties = properties)
+//    cache.write.jdbc(url = "jdbc:mysql://114.116.39.130:3306/dblp", table = "dblp", connectionProperties = properties)
   }
 
   test("filter with xpath") {

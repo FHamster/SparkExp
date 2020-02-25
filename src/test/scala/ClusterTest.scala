@@ -32,8 +32,8 @@ root
  */
 //做的一些测试
 final class ClusterTest extends FunSuite with BeforeAndAfterAll {
-  val testRes: String = "src/test/resources/article_after.xml"
-//  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
+//  val testRes: String = "src/test/resources/article_after.xml"
+  val testRes: String = "hdfs://localhost:9000//testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
@@ -71,7 +71,7 @@ final class ClusterTest extends FunSuite with BeforeAndAfterAll {
   }
 
   test("1"){
-    spark.sparkContext.textFile("src/test/resources/article_after.xml").count()
+    spark.sparkContext.textFile(testRes).count()
 //    spark.read.textFile().show()
   }
   test("show article dataframe") {
