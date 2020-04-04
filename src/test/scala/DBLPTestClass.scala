@@ -1,7 +1,6 @@
 import java.nio.file.Path
 import java.util.Properties
 
-import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.StructField
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
@@ -34,7 +33,7 @@ root
 //做的一些测试
 final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
   val testRes: String = "src/test/resources/article_after.xml"
-//  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
+  //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
@@ -75,11 +74,11 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
     dblpArticle.printSchema()
     dblpArticle.show()
 
-//    RDD
+    //    RDD
     //    dblpArticle.
   }
 
-  test("list all"){
+  test("list all") {
     dblpArticle.show(100)
   }
 
@@ -132,7 +131,6 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
     a(0).schema.fieldNames.foreach(println(_));
 
 
-    println()
     println(a(0).getAs(fieldName = "_key"));
 
     println(a(0).getAs(fieldName = "author"));
@@ -173,7 +171,12 @@ final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
       .filter(array_contains($"author._VALUE", "Paul Kocher"))
       .cache()
 
-//    cache.write.json("Testjson")
+    //    cache.write.json("Testjson")
+  }
+
+  test("test if there is corrupt_record") {
+    assert(!dblpArticle.columns.contains("_corrupt_record"))
+
   }
 
   test("write jdbc") {
