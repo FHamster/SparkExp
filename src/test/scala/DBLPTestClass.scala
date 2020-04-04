@@ -4,7 +4,8 @@ import java.util.Properties
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.StructField
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
-import org.scalatest.{BeforeAndAfterAll, FunSuite}
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.funsuite.AnyFunSuite
 
 import scala.collection.mutable.Map
 
@@ -31,7 +32,7 @@ root
 """
  */
 //做的一些测试
-final class DBLPTestClass extends FunSuite with BeforeAndAfterAll {
+final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   val testRes: String = "src/test/resources/article_after.xml"
   //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
