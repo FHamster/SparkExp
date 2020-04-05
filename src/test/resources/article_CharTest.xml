@@ -3,7 +3,7 @@
 
 <!--This xml file was created for test if character like this &#174; can be display correctly -->
 <dblp>
-    <article mdate="&#174;2018-01-07" key="&#174;tr/meltdown/m18" publtype="informal">
+    <article mdate="&#174;&#38;2018-01-07" key="&#174;&#60;&#62;&#160;tr/meltdown/m18" publtype="informal">
         <author>Moritz&#174; Lipp</author>
         <author orcid="0000-0002-1551-7438">Fahad Khan</author>
         <author aux="12asd">Michael Schwarz asd 0001</author>
