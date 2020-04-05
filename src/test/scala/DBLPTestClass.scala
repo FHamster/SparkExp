@@ -7,7 +7,7 @@ import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.funsuite.AnyFunSuite
 
-import scala.collection.mutable.Map
+import scala.collection.mutable
 
 /*
 """
@@ -31,9 +31,10 @@ root
 -- year: long (nullable = true)
 """
  */
-//做的一些测试
+//本地的Dataframe操作测试
 final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   val testRes: String = "src/test/resources/article_after.xml"
+
   //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
@@ -147,16 +148,8 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
     cache.printSchema()
     val a: Array[Row] = cache.take(1)
 
-    //    println(a)
-
-    //    a(0).getList()
-    //    a(0).schema.fieldNames.foreach(println(_));
-
-    //    a(0).schema.printTreeString()
-
-    //    a(0).schema.fields.foreach(println(_))
     val fields: Array[StructField] = a(0).schema.fields
-    var map: Map[String, Any] = Map()
+    var map: mutable.Map[String, Any] = mutable.Map()
     fields.foreach((field: StructField) => {
       println(s"${field.name} = ${a(0).getAs(fieldName = field.name)} ")
       map += (field.name -> a(0).getAs(fieldName = field.name))
@@ -171,8 +164,6 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
     val cache: DataFrame = dblpArticle
       .filter(array_contains($"author._VALUE", "Paul Kocher"))
       .cache()
-
-    //    cache.write.json("Testjson")
   }
 
   test("test if there is corrupt_record") {
@@ -192,7 +183,7 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
     properties.put("user", "root")
     properties.put("password", "Gaoxin459716010@163")
 
-//    cache.write.jdbc(url = "jdbc:mysql://114.116.39.130:3306/dblp", table = "dblp", connectionProperties = properties)
+    //    cache.write.jdbc(url = "jdbc:mysql://114.116.39.130:3306/dblp", table = "dblp", connectionProperties = properties)
   }
 
   test("filter with xpath") {
