@@ -74,6 +74,13 @@ object ReplaceEntityUtil {
     case "&yacute;" => "&#253;"
     case "&thorn;" => "&#254;"
     case "&yuml;" => "&#255;"
+
+    case "&quot;" => "&#34;"
+    case "&amp;" => "&#38;"
+    case "&lt;" => "&#60;"
+    case "&gt;" => "&#62;"
+    case "&nbsp;" => "&#160;"
+    case "&apos;" => "&#39;"
     case _ => {
       println(it)
       it.toString()
