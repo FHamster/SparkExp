@@ -37,7 +37,6 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
 
   //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
-    // It is intentionally a val to allow import implicits.
     SparkSession.builder()
       .master("local[*]")
       .appName("DBLPTest")
