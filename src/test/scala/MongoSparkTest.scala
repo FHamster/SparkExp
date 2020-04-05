@@ -8,10 +8,9 @@ import org.scalatest.funsuite.AnyFunSuite
  */
 class MongoSparkTest extends AnyFunSuite {
   val testFile = "src/test/resources/article_after.xml"
-
+  val charTest = "src/test/resources/article_CharTest.xml"
   val subNodeName = "article"
 
-  val charTest = "src/test/resources/article_CharTest.xml"
   val spark: SparkSession = SparkSession
     .builder
     .appName("XML_WriteTest")
