@@ -30,15 +30,17 @@ root
 -- year: long (nullable = true)
 """
  */
-//做的一些测试
+//DataFrame可进行的操作的测试
+//该测试类用于连接远程集群
+//需要经过一些配置后该测试才可用
 final class ClusterTest extends FunSuite with BeforeAndAfterAll {
-  //  val testRes: String = "src/test/resources/article_after.xml"
-  val testRes: String = "hdfs://namenode:8020/data/article_after.xml"
+  val sparkClusterUrl = "spark://localhost:7077"
+  val hdfsURL: String = "hdfs://namenode:8020/data/article_after.xml"
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
       //      .master("local[*]")
-      .master("spark://localhost:7077")
+      .master(sparkClusterUrl)
       .appName("DBLPTest")
       .getOrCreate()
   }
@@ -49,7 +51,7 @@ final class ClusterTest extends FunSuite with BeforeAndAfterAll {
     spark.read
       .option("rootTag", "dblp")
       .option("rowTag", "article")
-      .xml(testRes)
+      .xml(hdfsURL)
       .cache()
   }
   private var tempDir: Path = _
@@ -75,7 +77,7 @@ final class ClusterTest extends FunSuite with BeforeAndAfterAll {
     println(spark.sessionState)
 
     println("go")
-    spark.read.textFile(testRes).show()
+    spark.read.textFile(hdfsURL).show()
     spark.read.textFile("hdfs://namenode:8020/data/article_after.xml").show()
   }
   test("show article dataframe") {
