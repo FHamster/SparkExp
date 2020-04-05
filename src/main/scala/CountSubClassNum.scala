@@ -12,27 +12,39 @@ import org.apache.spark.sql.SparkSession
 (person,0)
 (data,0)
  */
+
+
 //统计dblp下的二级分类记录的数量
+/** *******************************************
+ * 该代码需要很长时间用于统计dblp下各个子节点的数量 *
+ * ********************************************/
 object CountSubClassNum extends App {
+
+  val pwd = "/Users/gaoxin/IdeaProjects/SparkExp/"
+  val wholeDBLP = "whole/dblp.xml"
+  val wholeDBLP_Converted = "whole/dblp_cvt.xml"
+
   val spark = SparkSession
     .builder
-    .appName("XML_Test")
+    .appName("CountSubClassNum")
     .master("local[*]")
     .getOrCreate()
-
-  val subNode = Array("article", "inproceedings", "proceedings", "book",
+  // 子节点的列表
+  val subNode = Seq("article", "inproceedings", "proceedings", "book",
     "incollection", "phdthesis", "mastersthesis", "www", "person", "data")
+
+  import com.databricks.spark.xml._
 
   val subNodeRowNum = subNode.map(it => {
     val rowNum: Long = spark.read
-      .format("com.databricks.spark.xml")
       .option("rootTag", "dblp")
       .option("rowTag", it)
-      .load("file:///root/dblp.xml").count()
+      .xml(wholeDBLP_Converted)
+      .count()
+
     (it, rowNum)
   })
-    .array
 
-  subNodeRowNum.foreach(it => println(it))
+  subNodeRowNum.foreach(println)
   spark.stop()
 }
