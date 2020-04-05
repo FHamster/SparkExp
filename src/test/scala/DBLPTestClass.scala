@@ -31,7 +31,7 @@ root
 -- year: long (nullable = true)
 """
  */
-//本地的Dataframe操作测试
+//本地的小规模Dataframe操作测试
 final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   val testRes: String = "src/test/resources/article_after.xml"
 
@@ -53,17 +53,6 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
       .xml(testRes)
       .cache()
   }
-  private var tempDir: Path = _
-
-  override protected def beforeAll(): Unit = {
-    super.beforeAll()
-
-    //    spark // Initialize Spark session
-    //    tempDir = Files.createTempDirectory("DBLPTestDir")
-    //    tempDir.toFile.deleteOnExit()
-  }
-
-
   override protected def afterAll(): Unit = {
     try {
       spark.stop()
