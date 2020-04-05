@@ -1,9 +1,15 @@
 import java.util.Properties
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.scalatest.{BeforeAndAfterAll, FunSuite}
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.funsuite.AnyFunSuite
 
-final class jdbcdump extends FunSuite with BeforeAndAfterAll {
+
+/**
+ * 连接jdbc的测试
+ * @deprecated 这个东西写着玩的
+ */
+final class jdbcdump extends AnyFunSuite with BeforeAndAfterAll {
   private lazy val spark: SparkSession = {
     // It is intentionally a val to allow import implicits.
     SparkSession.builder()
@@ -39,7 +45,7 @@ final class jdbcdump extends FunSuite with BeforeAndAfterAll {
     }
   }
 
-  test("admin_region") {
+  /*test("admin_region") {
     val jdbcDataFrame: DataFrame = spark.read.jdbc(
       url = "jdbc:mysql://114.116.39.130:3306/dolldrobe",
       table = "administrativeregion",
@@ -52,9 +58,9 @@ final class jdbcdump extends FunSuite with BeforeAndAfterAll {
       table = "administrativeregion",
       connectionProperties = conPro
     )
-  }
+  }*/
 
-  test("commodity") {
+ /* test("commodity") {
     val jdbcDataFrame: DataFrame = spark.read.jdbc(
       url = "jdbc:mysql://114.116.39.130:3306/dolldrobe",
       table = "commodity",
@@ -78,5 +84,5 @@ final class jdbcdump extends FunSuite with BeforeAndAfterAll {
       table = "commodity3",
       connectionProperties = conPro
     )
-  }
+  }*/
 }
