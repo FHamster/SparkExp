@@ -2,6 +2,26 @@
 <!--<!DOCTYPE dblp SYSTEM "file:///root/SparkMathModel/src/main/resources/dblp.dtd">-->
 
 <dblp>
+    <article mdate="2018-01-07" key="tr/meltdown/m18&#174;" publtype="informal">
+        <author>Moritz Lipp</author>
+        <!--???dblp?????????author?orcid??-->
+        <author orcid="0000-0002-1551-7438">Fahad Khan</author>
+        <!--????aux-->
+        <author aux="12asd">Michael Schwarz asd 0001</author>
+        <author>Michael Schwarz 0001</author>
+        <author>Daniel Gruss</author>
+        <author>Thomas Prescher 0002</author>
+        <author>Werner Haas</author>
+        <author>Stefan Mangard</author>
+        <author>Paul Kocher</author>
+        <author>Daniel Genkin</author>
+        <author>Yuval Yarom</author>
+        <author>Mike Hamburg</author>
+        <title>Meltdown</title>
+        <journal>meltdownattack.com</journal>
+        <ee>https://meltdownattack.com/meltdown.pdf</ee>
+        <year>2018</year>
+    </article>
     <article mdate="2018-01-07" key="tr/meltdown/s18" publtype="informal">
         <author>Paul Kocher</author>
         <author>Daniel Genkin</author>
@@ -15,7 +35,7 @@
         <author>Yuval Yarom</author>
         <title>Spectre Attacks: Exploiting Speculative Execution.</title>
         <journal>meltdownattack.com</journal>
-        <year>2018</year>
+        <year>2018 оо</year>
         <ee>https://spectreattack.com/spectre.pdf</ee>
     </article>
     <article mdate="2018-01-07" key="tr/meltdown/m18" publtype="informal">
@@ -33,7 +53,7 @@
         <title>Meltdown</title>
         <journal>meltdownattack.com</journal>
         <ee>https://meltdownattack.com/meltdown.pdf</ee>
-        <year>2018</year>
+        <year>2018   &#174;  о о</year>
     </article>
     <article mdate="2017-06-08" key="tr/gte/TR-0263-08-94-165" publtype="informal">
         <author>Frank Manola</author>
@@ -58,11 +78,11 @@
         </note>
     </article>
     <article mdate="2017-06-08" key="tr/gte/TR-0174-12-91-165" publtype="informal">
-        <author>Mark F. Hornick</author>
+        <author>Mark F. Hornick  </author>
         <author>Joe D. Morrison</author>
         <author>Farshad Nayeri</author>
         <title>Integrating Heterogeneous, Autonomous, Distributed Applications Using the DOM Prototype.</title>
-        <journal>GTE Laboratories Incorporated</journal>
+        <journal>GTE Laboratories Incorporated </journal>
         <volume>TR-0174-12-91-165</volume>
         <month>December</month>
         <year>1991</year>
@@ -236,7 +256,7 @@
     <article mdate="2017-06-08" key="tr/ibm/LILOG15" publtype="informal">
         <author>Werner Emde</author>
         <author>Claus-Rainer Rollinger</author>
-        <title>Wissensrepr&auml;sentation und Maschinelles Lernen</title>
+        <title>Wissensrepr &auml;sentation und Maschinelles Lernen</title>
         <journal>LILOG-Report</journal>
         <volume>15</volume>
         <year>1987</year>

@@ -12,8 +12,8 @@ object Test3 {
       .master("local[*]")
       //      .config("driver-memory", "4096M")
 //      .config("spark.executor.memory", "4G")
-      //.config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.test")
-      .config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.test")
+      .config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
+      .config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
       .getOrCreate()
 
 
@@ -21,14 +21,14 @@ object Test3 {
 
     //    val df = spark.read.format("com.databricks.spark.xml").option("rowTag", "article").load("file:///root/dblp.xml")
     //    val df = spark.read.format("com.databricks.spark.xml").option("rootTag", "dblp").option("rowTag", "article").load("file:///root/dblp.xml")
-//    val df = spark.read
-//      .format("com.databricks.spark.xml")
-//      .option("rootTag", "dblp")
-//      .option("rowTag", "article")
-//      .option("charset", "ISO-8859-1")
-//      .load("file:////Users/linmouhan/IdeaProjects/SparkExp/article.xml").toDF()
+    val df = spark.read
+      .format("com.databricks.spark.xml")
+      .option("rootTag", "dblp")
+      .option("rowTag", "article")
+      .option("charset", "UTF-8")
+      .load("file:////Users/linmouhan/IdeaProjects/SparkExp/article.xml").toDF()
 
-    val df = MongoSpark.load(spark).toDF()
+    //val df = MongoSpark.load(spark).toDF()
 
     //LogExample.setStreamingLogLevels()
 
@@ -40,15 +40,17 @@ object Test3 {
 
     //    val selectedData = df.select("author", "_id")
 
-    df.show(100)
+    df.select("year")
+    .show()
 
+    df.printSchema()
     //val test = spark.sparkContext.parallelize(Seq(df))
 
     //println(test)
 
     //MongoSpark.save(df)
 
-    df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
+    //df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
 
   }
 }
