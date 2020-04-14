@@ -7,6 +7,7 @@ import org.apache.spark.{SparkConf, SparkContext}
  *
  * http://spark.apache.org/docs/2.3.0/api/sql/#xpath
  */
+
 object TestSQL {
 
   def main(args: Array[String]) {

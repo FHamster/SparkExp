@@ -3,6 +3,7 @@
 
 <dblp>
     <article mdate="2018-01-07" key="tr/meltdown/s18" publtype="informal">
+        <author>&auml;entity char</author>
         <author>Paul Kocher</author>
         <author>Daniel Genkin</author>
         <author>Daniel Gruss</author>
