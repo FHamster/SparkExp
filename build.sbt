@@ -6,7 +6,7 @@ scalaVersion := "2.12.11"
 
 //useCoursier := false
 
-logLevel := Level.Debug
+//logLevel := Level.Debug
 
 libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-api" % "1.7.30",
