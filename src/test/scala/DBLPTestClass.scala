@@ -1,39 +1,17 @@
-import java.nio.file.Path
 import java.util.Properties
 
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.StructField
+import org.apache.spark.sql.types._
 import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.funsuite.AnyFunSuite
 
 import scala.collection.mutable
 
-/*
-"""
-root
--- _key: string (nullable = true)
--- _mdate: string (nullable = true)
--- _publtype: string (nullable = true)
--- author: array (nullable = true)
-    |-- element: struct (containsNull = true)
-    |    |-- _VALUE: string (nullable = true)
-    |    |-- _orcid: string (nullable = true)
--- cdrom: string (nullable = true)
--- ee: string (nullable = true)
--- journal: string (nullable = true)
--- month: string (nullable = true)
--- note: string (nullable = true)
--- publisher: string (nullable = true)
--- title: string (nullable = true)
--- url: string (nullable = true)
--- volume: string (nullable = true)
--- year: long (nullable = true)
-"""
- */
 //本地的小规模Dataframe操作测试
 final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
-  val testRes: String = "src/test/resources/article_after.xml"
+  //  val testRes: String = "src/test/resources/article_after.xml"
+  //  val testRes: String = "src/test/resources/article_CharTest.xml"
 
   //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
   private lazy val spark: SparkSession = {
@@ -44,14 +22,18 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
       .getOrCreate()
   }
 
+
   private lazy val dblpArticle: DataFrame = {
     import com.databricks.spark.xml._
+//    PropertiesObj.ManualArticleSchema.printTreeString()
     spark.read
+      //.schema(PropertiesObj.ManualArticleSchema)//手动设定schema
       .option("rootTag", "dblp")
       .option("rowTag", "article")
-      .xml(testRes)
+      .xml(PropertiesObj.wholeDBLP_cvtSparkPath)
       .cache()
   }
+
   override protected def afterAll(): Unit = {
     try {
       spark.stop()
@@ -63,9 +45,6 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   test("show article dataframe") {
     dblpArticle.printSchema()
     dblpArticle.show()
-
-    //    RDD
-    //    dblpArticle.
   }
 
   test("list all") {
