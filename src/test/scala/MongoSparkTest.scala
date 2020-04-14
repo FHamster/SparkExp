@@ -15,15 +15,30 @@ class MongoSparkTest extends AnyFunSuite {
     .builder
     .appName("XML_WriteTest")
     .master("local[*]")
-    .config("spark.mongodb.output.uri", s"mongodb://127.0.0.1/SparkDBLPTest.$subNodeName")
+    .config("spark.mongodb.output.uri", s"mongodb://127.0.0.1/SparkDBLPTest.${subNodeName}")
     .getOrCreate()
   test("write article subnode into mongodb") {
     import com.databricks.spark.xml._
     val opt = spark.read
+      .schema(PropertiesObj.ManualArticleSchema)//手动指定schema
       .option("rootTag", "dblp")
       .option("rowTag", subNodeName)
-      .option("charset", "UTF-8")
+      .option("charset", "ISO-8859-1")
       .xml(PropertiesObj.wholeDBLP_cvtSparkPath)
+
+    opt.show()
+    opt.printSchema()
+
+    println("write into mongodb")
+    MongoSpark.save(opt)
+  }
+  test("write article subnode into mongodb(use chartest)") {
+    import com.databricks.spark.xml._
+    val opt = spark.read
+      .schema(PropertiesObj.ManualArticleSchema)
+      .option("rootTag", "dblp")
+      .option("rowTag", subNodeName)
+      .xml(charTest)
 
     opt.show()
     opt.printSchema()
