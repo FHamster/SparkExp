@@ -8,59 +8,6 @@ import org.scalatest.funsuite.AnyFunSuite
 
 import scala.collection.mutable
 
-/*
-完整的article schema
-root
- |-- _cdate: string (nullable = true)
- |-- _key: string (nullable = true)
- |-- _mdate: string (nullable = true)
- |-- _publtype: string (nullable = true)
- |-- author: array (nullable = true)
- |    |-- element: struct (containsNull = true)
- |    |    |-- _VALUE: string (nullable = true)
- |    |    |-- _aux: string (nullable = true)
- |    |    |-- _orcid: string (nullable = true)
- |-- booktitle: string (nullable = true)
- |-- cdrom: string (nullable = true)
- |-- cite: array (nullable = true)
- |    |-- element: struct (containsNull = true)
- |    |    |-- _VALUE: string (nullable = true)
- |    |    |-- _label: string (nullable = true)
- |-- crossref: string (nullable = true)
- |-- editor: array (nullable = true)
- |    |-- element: struct (containsNull = true)
- |    |    |-- _VALUE: string (nullable = true)
- |    |    |-- _orcid: string (nullable = true)
- |-- ee: array (nullable = true)
- |    |-- element: struct (containsNull = true)
- |    |    |-- _VALUE: string (nullable = true)
- |    |    |-- _type: string (nullable = true)
- |-- journal: string (nullable = true)
- |-- month: string (nullable = true)
- |-- note: array (nullable = true)
- |    |-- element: struct (containsNull = true)
- |    |    |-- _VALUE: string (nullable = true)
- |    |    |-- _type: string (nullable = true)
- |-- number: string (nullable = true)
- |-- pages: string (nullable = true)
- |-- publisher: string (nullable = true)
- |-- title: struct (nullable = true)
- |    |-- _VALUE: string (nullable = true)
- |    |-- _bibtex: string (nullable = true)
- ====================================================这部分要想办法忽略掉
- |    |-- i: array (nullable = true)
- |    |    |-- element: string (containsNull = true)
- |    |-- sub: array (nullable = true)
- |    |    |-- element: string (containsNull = true)
- |    |-- sup: array (nullable = true)
- |    |    |-- element: string (containsNull = true)
- ====================================================
- |-- url: string (nullable = true)
- |-- volume: string (nullable = true)
- |-- year: long (nullable = true)
-
-
- */
 //本地的小规模Dataframe操作测试
 final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   //  val testRes: String = "src/test/resources/article_after.xml"
