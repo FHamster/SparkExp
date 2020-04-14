@@ -16,7 +16,7 @@
         <author>Daniel Genkin</author>
         <author>Yuval Yarom</author>
         <author>Mike Hamburg</author>
-        <title>Meltdown</title>
+        <title>The Many-Valued Theorem Prover<sub>3</sub>T<sup>A</sup>P.</title>
         <journal>meltdownattack.com</journal>
         <ee>https://meltdownattack.com/meltdown.pdf</ee>
         <year>2018&#174;</year>
@@ -32,7 +32,8 @@
         <author>Thomas Prescher 0002</author>
         <author>Michael Schwarz 0001</author>
         <author>Yuval Yarom</author>
-        <title>Spectre Attacks: Exploiting Speculative Execution.</title>
+        <title>The Many-Valued Theorem Prover
+            <sub>3</sub>T<sup>A</sup>P.</title>
         <journal>meltdownattack.com</journal>
         <year>2018&#174;</year>
         <ee>https://spectreattack.com/spectre.pdf</ee>
@@ -50,8 +51,8 @@
     <article mdate="2019-05-27" key="tr/gte/TR-0222-10-92-165" publtype="informal">
         <author>Michael L. Brodie</author>
         <author>Micha&#174;el Stonebraker</author>
-        <title>DARWIN: On the Incremental Migration of Legacy Information Systems</title>
-        <journal>GTE Laboratories Incorporated</journal>
+        <title>The Many-Valued Theorem Prover
+            <sub>3</sub>T<sup>A</sup>P.</title> <journal>GTE Laboratories Incorporated</journal>
         <volume>&#174;TR-0222-10-92-165</volume>
         <month>March</month>
         <year>1993</year>
