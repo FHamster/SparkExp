@@ -12,8 +12,8 @@ object Test3 {
       .master("local[*]")
       //      .config("driver-memory", "4096M")
 //      .config("spark.executor.memory", "4G")
-      .config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
-      .config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
+      //.config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
+      //.config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
       .getOrCreate()
 
 
@@ -40,10 +40,10 @@ object Test3 {
 
     //    val selectedData = df.select("author", "_id")
 
-    df.select("year")
-    .show()
+    //df.select("year")
+    //.show()
 
-    df.printSchema()
+    //df.printSchema()
     //val test = spark.sparkContext.parallelize(Seq(df))
 
     //println(test)

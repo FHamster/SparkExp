@@ -121,8 +121,8 @@ root
     StructField("title", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_bibtex", StringType, nullable = true)
-        , StructField("i", ArrayType(
+        StructField("_bibtex", StringType, nullable = true),
+        StructField("i", ArrayType(
           StructType(Array(
             StructField("element", StringType, nullable = true),
           )), containsNull = true)
@@ -142,7 +142,7 @@ root
     ),
     StructField("url", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
-    StructField("year", StringType, nullable = true)//long 或 string
+    StructField("year", StringType, nullable = true) //long 或 string
   ))
 
   def main(args: Array[String]): Unit = {
