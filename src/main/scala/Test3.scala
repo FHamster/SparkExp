@@ -6,27 +6,27 @@ import org.bson.Document
 object Test3 {
   def main(args: Array[String]): Unit = {
 
-    val spark = SparkSession
-      .builder
-      .appName("XML_Test")
-      .master("local[*]")
-      //      .config("driver-memory", "4096M")
-//      .config("spark.executor.memory", "4G")
-      //.config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
-      //.config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
-      .getOrCreate()
+//    val spark = SparkSession
+//      .builder
+//      .appName("XML_Test")
+//      .master("local[*]")
+//      //      .config("driver-memory", "4096M")
+////      .config("spark.executor.memory", "4G")
+//      //.config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
+//      //.config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
+//      .getOrCreate()
 
 
-    import  spark.implicits._
+   // import  spark.implicits._
 
     //    val df = spark.read.format("com.databricks.spark.xml").option("rowTag", "article").load("file:///root/dblp.xml")
     //    val df = spark.read.format("com.databricks.spark.xml").option("rootTag", "dblp").option("rowTag", "article").load("file:///root/dblp.xml")
-    val df = spark.read
-      .format("com.databricks.spark.xml")
-      .option("rootTag", "dblp")
-      .option("rowTag", "article")
-      .option("charset", "UTF-8")
-      .load("file:////Users/linmouhan/IdeaProjects/SparkExp/article.xml").toDF()
+//    val df = spark.read
+//      .format("com.databricks.spark.xml")
+//      .option("rootTag", "dblp")
+//      .option("rowTag", "article")
+//      .option("charset", "UTF-8")
+//      .load("file:////Users/linmouhan/IdeaProjects/SparkExp/article.xml").toDF()
 
     //val df = MongoSpark.load(spark).toDF()
 
@@ -51,6 +51,13 @@ object Test3 {
     //MongoSpark.save(df)
 
     //df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
+    val testText2 = "<title>The Many-Valued <i> sd </i> Theorem Prover<sub>3</sub><sub>3</sub>T<sup>A</sup>P. (i) i (/i)</title>";
+
+
+    //def main(args: Array[String]): Unit = {
+      val text = TagUtil.atorParse(testText2);
+      printf(testText2);
+    //}
 
   }
 }

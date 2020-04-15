@@ -118,28 +118,25 @@ root
     StructField("number", StringType, nullable = true),
     StructField("pages", StringType, nullable = true),
     StructField("publisher", StringType, nullable = true),
-    StructField("title", ArrayType(
-      StructType(Array(
-        StructField("_VALUE", StringType, nullable = true),
-        StructField("_bibtex", StringType, nullable = true),
-        StructField("i", ArrayType(
-          StructType(Array(
-            StructField("element", StringType, nullable = true),
-          )), containsNull = true)
-        ),
-        StructField("sub", ArrayType(
-          StructType(Array(
-            StructField("element", StringType, nullable = true),
-          )), containsNull = true)
-        ),
-        StructField("sup", ArrayType(
-          StructType(Array(
-            StructField("element", StringType, nullable = true),
-          )), containsNull = true)
-        ),
-      )
-      ), containsNull = true)
-    ),
+    StructField("title", StructType(Array(
+      StructField("_VALUE", StringType, nullable = true),
+      StructField("_bibtex", StringType, nullable = true),
+/*      StructField("i", ArrayType(
+        StructType(Array(
+          StructField("element", StringType, nullable = true),
+        )), containsNull = true)
+      ),
+      StructField("sub", ArrayType(
+        StructType(Array(
+          StructField("element", StringType, nullable = true),
+        )), containsNull = true)
+      ),
+      StructField("sup", ArrayType(
+        StructType(Array(
+          StructField("element", StringType, nullable = true),
+        )), containsNull = true)
+      ),*/
+    )), nullable = true),
     StructField("url", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
     StructField("year", StringType, nullable = true) //long 或 string
