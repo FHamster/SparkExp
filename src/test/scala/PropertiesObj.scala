@@ -86,15 +86,66 @@ root
         StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
-    StructField("title", StringType, nullable = true),
-    StructField("url", StringType, nullable = true),
+    StructField("booktitle", StringType, nullable = true),
     StructField("cdrom", StringType, nullable = true),
-    StructField("ee", StringType, nullable = true),
+    StructField("cite", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_label", StringType, nullable = true)
+      )), containsNull = true)
+    ),
+    StructField("crossref", StringType, nullable = true),
+    StructField("editor", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_orcid", StringType, nullable = true)
+      )), containsNull = true)
+    ),
+    StructField("ee", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_type", StringType, nullable = true)
+      )), containsNull = true)
+    ),
     StructField("journal", StringType, nullable = true),
     StructField("month", StringType, nullable = true),
-    StructField("year", LongType, nullable = true),
-    StructField("note", StringType, nullable = true),
+    StructField("note", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_type", StringType, nullable = true)
+      )), containsNull = true)
+    ),
+    StructField("number", StringType, nullable = true),
+    StructField("pages", StringType, nullable = true),
     StructField("publisher", StringType, nullable = true),
-    StructField("volume", StringType, nullable = true)
+    StructField("title", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_bibtex", StringType, nullable = true)
+        , StructField("i", ArrayType(
+          StructType(Array(
+            StructField("element", StringType, nullable = true),
+          )), containsNull = true)
+        ),
+        StructField("sub", ArrayType(
+          StructType(Array(
+            StructField("element", StringType, nullable = true),
+          )), containsNull = true)
+        ),
+        StructField("sup", ArrayType(
+          StructType(Array(
+            StructField("element", StringType, nullable = true),
+          )), containsNull = true)
+        ),
+      )
+      ), containsNull = true)
+    ),
+    StructField("url", StringType, nullable = true),
+    StructField("volume", StringType, nullable = true),
+    StructField("year", StringType, nullable = true)//long 或 string
   ))
+
+  def main(args: Array[String]): Unit = {
+    PropertiesObj.ManualArticleSchema.printTreeString();
+  }
 }
