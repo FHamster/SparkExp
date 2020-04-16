@@ -121,7 +121,8 @@ root
     StructField("title", StructType(Array(
       StructField("_VALUE", StringType, nullable = true),
       StructField("_bibtex", StringType, nullable = true),
-/*      StructField("i", ArrayType(
+      /*
+      StructField("i", ArrayType(
         StructType(Array(
           StructField("element", StringType, nullable = true),
         )), containsNull = true)
@@ -135,7 +136,8 @@ root
         StructType(Array(
           StructField("element", StringType, nullable = true),
         )), containsNull = true)
-      ),*/
+      ),
+      */
     )), nullable = true),
     StructField("url", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
@@ -146,3 +148,4 @@ root
     PropertiesObj.ManualArticleSchema.printTreeString();
   }
 }
+
