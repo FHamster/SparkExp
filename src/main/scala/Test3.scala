@@ -53,10 +53,10 @@ object Test3 {
     //df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
     val testText2 = "<title>The Many-Valued <i> sd </i> Theorem Prover<sub>3</sub><sub>3</sub>T<sup>A</sup>P. (i) i (/i)</title>";
 
-
+    val testText = "<i>";
     //def main(args: Array[String]): Unit = {
-      val text = TagUtil.atorParse(testText2);
-      printf(testText2);
+      val text = TagUtil.rtoaAarse(testText2);
+      printf(text);
     //}
 
   }

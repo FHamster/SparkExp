@@ -11,7 +11,7 @@ object TagUtil {
     case "\\<i\\>" => "\\(i\\)"
     case "\\<sub\\>" => "\\(sub\\)"
     case "\\<sup\\>" => "\\(sup\\)"
-    case "\\</i\\>" => "\\(/i\\)"
+    case "\\</i\\>" => "\\(/i\\)";
     case "\\</sub\\>" => "\\(/sub\\)"
     case "\\</sup\\>" => "\\(/sup\\)"
     case _ => {
