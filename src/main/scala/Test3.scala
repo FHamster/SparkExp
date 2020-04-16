@@ -55,8 +55,11 @@ object Test3 {
 
     val testText = "<i>";
     //def main(args: Array[String]): Unit = {
+
       val text = TagUtil.atorParse(testText2);
       printf(text);
+      println("\n");
+      printf(TagUtil.rtoaAarse(text));
     //}
 
   }

@@ -81,6 +81,7 @@ object ReplaceEntityUtil {
     case "&gt;" => "&#62;"
     case "&nbsp;" => "&#160;"
     case "&apos;" => "&#39;"
+    //这里只是为了打印出不在匹配条件里面的情况
     case _ => {
       println(it)
       it.toString()
