@@ -14,23 +14,23 @@ object TagUtil {
     case "\\</i\\>" => "\\(/i\\)";
     case "\\</sub\\>" => "\\(/sub\\)"
     case "\\</sup\\>" => "\\(/sup\\)"
-    case _ => {
-      println(it)
-      it.toString()
-    }
+//    case _ => {
+//      println(it)
+//      it.toString()
+//    }
   })
 
   def rtoaAarse(s: String): String = rtoaRegex.replaceAllIn(s, it => it.toString() match{
-    case "\\(i\\)" => "\\<i\\>"
+    case "\\(i\\)" => "<i>"
     case "\\(sub\\)" => "\\<sub\\>"
     case "\\(sup\\)" => "\\<sup\\>"
     case "\\(/i\\)" => "\\</i\\>"
     case "\\(/sub\\)" => "\\</sub\\>"
     case "\\(/sup\\)" => "\\</sup\\>"
-    case _ => {
-      println(it)
-      it.toString()
-    }
+//    case _ => {
+//      println(it)
+//      it.toString()
+//    }
   })
 
 }
