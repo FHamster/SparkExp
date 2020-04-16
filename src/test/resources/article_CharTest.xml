@@ -16,7 +16,7 @@
         <author>Daniel Genkin</author>
         <author>Yuval Yarom</author>
         <author>Mike Hamburg</author>
-        <title>The Many-Valued Theorem Prover<sub>3</sub>T<sup>A</sup>P.</title>
+        <title bibtex="A Note on the Congruence $\left( \matrix \mathit{nd} \\ \mathit{md} \endmatrix \right)\equiv \left( \matrix n \\ m \endmatrix \right)(\text{mod}\, q)$.">A Note on the Congruence (nd md) = (n m) (mod q).</title>
         <journal>meltdownattack.com</journal>
         <ee>https://meltdownattack.com/meltdown.pdf</ee>
         <year>2018&#174;</year>
@@ -32,8 +32,7 @@
         <author>Thomas Prescher 0002</author>
         <author>Michael Schwarz 0001</author>
         <author>Yuval Yarom</author>
-        <title>The Many-Valued Theorem Prover
-            <sub>3</sub>T<sup>A</sup>P.</title>
+        <title>The Many-Valued Theorem Prover<sub>3</sub>T<sup>A</sup>P.</title>
         <journal>meltdownattack.com</journal>
         <year>2018&#174;</year>
         <ee>https://spectreattack.com/spectre.pdf</ee>
