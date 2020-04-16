@@ -38,4 +38,5 @@ final class EntityConvertTest extends AnyFunSuite {
 
     wholeDBLP_cvtRDD.saveAsTextFile(PropertiesObj.wholeDBLP_cvtSparkPath)
   }
+
 }
