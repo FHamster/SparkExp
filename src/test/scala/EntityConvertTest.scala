@@ -14,6 +14,21 @@ final class EntityConvertTest extends AnyFunSuite {
       ReplaceEntityUtil.parse(testText)
     }
   }
+
+  val testTagString = "<title>The Many-Valued <i>Theorem</i> Prover<sub>3</sub>T<sup>A</sup>P.</title>"
+  val testTag_cvtString = "<title>The Many-Valued (i)Theorem(/i) Prover(sub)3(/sub)T(sup)A(/sup)P.</title>"
+  test("change Tag string") {
+    assertResult(testTag_cvtString) {
+      ReplaceTagUtil.atorParse(testTagString)
+    }
+  }
+
+  test("change Tag string2") {
+    assertResult(testTagString) {
+      ReplaceTagUtil.rtoaAarse(testTagString)
+    }
+  }
+
   test("Convert whole dblp") {
 
     // 检查是否已经有转换后的文件
@@ -33,10 +48,12 @@ final class EntityConvertTest extends AnyFunSuite {
     val DBLPLines: RDD[String] = spark.sparkContext.textFile(PropertiesObj.wholeDBLP_SparkPath)
 
     //转换实体
-    val wholeDBLP_cvtRDD: RDD[String] = DBLPLines.map(ReplaceEntityUtil.parse)
+    val wholeDBLP_cvtRDD: RDD[String] = DBLPLines
+      .map(ReplaceEntityUtil.parse)
+      .map(ReplaceTagUtil.atorParse)
 
 
-    wholeDBLP_cvtRDD.saveAsTextFile(PropertiesObj.wholeDBLP_cvtSparkPath)
+      wholeDBLP_cvtRDD.saveAsTextFile(PropertiesObj.wholeDBLP_cvtSparkPath)
   }
 
 }

@@ -3,9 +3,9 @@ import ReplaceEntityUtil.regex
 import scala.util.matching.Regex
 
 object ReplaceTagUtil {
-  private val atorRegex: Regex = new Regex("\\<(sub|i|sup|/i|/sub|/sup)\\>");
+  private val atorRegex: Regex = new Regex("\\<(sub|i|sup|/i|/sub|/sup|tt|/tt)\\>");
 
-  private val rtoaRegex: Regex = new Regex("\\((sub|i|sup|/i|/sub|/sup)\\)");
+  private val rtoaRegex: Regex = new Regex("\\((sub|i|sup|/i|/sub|/sup|tt|/tt)\\)");
 
   //我就只改了<i>->(i)和</i>->(/i)
   /*
@@ -17,9 +17,11 @@ object ReplaceTagUtil {
   //说实话我不太明白\是做什么的,这里应该不用转义
   def atorParse(s: String): String = atorRegex.replaceAllIn(s, it => it.toString() match{
     case "<i>" => "(i)"
+    case "<tt>" => "(tt)"
     case "<sub>" => "(sub)"
     case "<sup>" => "(sup)"
     case "</i>" => "(/i)"
+    case "</tt>" => "(/tt)"
     case "</sub>" => "(/sub)"
     case "</sup>" => "(/sup)"
     case _ => {
@@ -31,9 +33,11 @@ object ReplaceTagUtil {
   //
   def rtoaAarse(s: String): String = rtoaRegex.replaceAllIn(s, it => it.toString() match{
     case "(i)" => "<i>"
+    case "(tt)" => "<tt>"
     case "(sub)" => "<sub>"
     case "(sup)" => "<sup>"
     case "(/i)" => "</i>"
+    case "(/tt)" => "</tt>"
     case "(/sub)" => "</sub>"
     case "(/sup)" => "</sup>"
     case _ => {
