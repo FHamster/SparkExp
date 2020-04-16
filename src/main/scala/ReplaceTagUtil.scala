@@ -2,7 +2,7 @@ import ReplaceEntityUtil.regex
 
 import scala.util.matching.Regex
 
-object TagUtil {
+object ReplaceTagUtil {
   private val atorRegex: Regex = new Regex("\\<(sub|i|sup|/i|/sub|/sup)\\>");
 
   private val rtoaRegex: Regex = new Regex("\\((sub|i|sup|/i|/sub|/sup)\\)");
