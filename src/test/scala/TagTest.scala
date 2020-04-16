@@ -1,7 +1,6 @@
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.scalatest.funsuite.AnyFunSuite
-import java.io.File
 final class TagTest extends  AnyFunSuite{
     test("change Tag"){
       val spark = SparkSession
@@ -13,12 +12,11 @@ final class TagTest extends  AnyFunSuite{
             //.config("spark.mongodb.output.uri","mongodb://127.0.0.1/scalaTest.after")
             //.config("spark.mongodb.input.uri","mongodb://127.0.0.1/scalaTest.after")
             .getOrCreate()
-      import  spark.implicits._
 
-      val fileRDD : RDD[String] = spark.sparkContext.textFile("file:////Users/linmouhan/IdeaProjects/SparkExp/article.xml")
+      val fileRDD : RDD[String] = spark.sparkContext.textFile(s"${PropertiesObj.pwd}/article.xml")
 
       val changeTagFile: RDD[String] = fileRDD.map(ReplaceTagUtil.atorParse)
 
-      changeTagFile.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/article_after_Tag.xml")
+      changeTagFile.saveAsTextFile(s"${PropertiesObj.pwd }/article_after_Tag.xml")
     }
 }
