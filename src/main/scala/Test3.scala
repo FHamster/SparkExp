@@ -80,6 +80,8 @@ object Test3 {
 //      .dropDuplicates
 //      .show(100)
 //
+
+    //提取需要的字段转换字符串
     var str = df.select($"author"("_VALUE").alias("author"),$"_key",$"title")
       .collect()
       .mkString
@@ -87,17 +89,20 @@ object Test3 {
       //.foreach(println)
       //.show(100)
 
+    //对wrappedarray进行预处理，便于分隔
     var newarr = wpParse(str)
       .split("\\|")
       .map(x => x.trim)
       .toBuffer
 
+    //按标记分隔人名与文章
     var newmap = newarr.map(x => x.split("\\)"))
 
     var myarr = ArrayBuffer[String]()
 
     //newarr.foreach(println)
 
+    //文章扩充，人名对应
     for(row <- newmap){
       val tempArr = row(0).split(",")
       for(it <- tempArr){
