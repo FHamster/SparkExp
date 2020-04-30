@@ -3,6 +3,9 @@ import org.apache.spark.sql.SparkSession
 import com.mongodb.spark._
 import com.mongodb.spark.config._
 import org.bson.Document
+import org.apache.spark.sql.types._
+import org.apache.spark.sql.Row
+
 
 import scala.collection.mutable
 import scala.util.matching.Regex
@@ -112,7 +115,49 @@ object Test3 {
       }
     }
 
-    val b= myarr.map(x => x.split(",",2))
+//    val b= myarr.map(x => x.split(",",2))
+//
+//    val fields = Array(StructField("author", StringType, true),
+//      StructField("title", StringType, true))
+//    val schema = StructType(fields)
+//
+//    val rowRdd = spark.sparkContext.parallelize(b.map(x => Row(x(0),x(1))))
+//
+////    println(rowRdd.getClass)
+//
+//    var authorDf = spark.createDataFrame(rowRdd, schema)
+//
+//    authorDf.createOrReplaceTempView("authors")
+//
+//    authorDf.dropDuplicates
+//
+//    val df1 = spark.sql("select author,concat_ws('、',collect_set(title)) as titles from authors group by author")
+//    df1.show(false)
+
+    //String切片name id title
+    val prearr= myarr.map(x => x.split(","))
+
+    //create new dataframe
+    val fields = Array(StructField("author", StringType, true),
+      StructField("title", StringType, true),
+      StructField("key", StringType, true))
+
+    val schema = StructType(fields)
+
+    val rowRdd = spark.sparkContext.parallelize(prearr.map(x => Row(x(0),x(1),x(2))))
+
+    //    println(rowRdd.getClass)
+
+    var authorDf = spark.createDataFrame(rowRdd, schema)
+
+    authorDf.createOrReplaceTempView("authors")
+
+    //去重
+    authorDf.dropDuplicates
+
+    //根据名字合并
+    val df1 = spark.sql("select author, concat_ws('、',collect_set(key)) as keys, concat_ws('、',collect_set(title)) as titles from authors group by author")
+    df1.show(false)
 
 
 //      .write.format("com.databricks.spark.xml")
