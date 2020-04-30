@@ -6,7 +6,9 @@ import org.bson.Document
 
 import scala.collection.mutable
 import scala.util.matching.Regex
+import ReplaceWrapped.wpParse
 
+import scala.collection.mutable.ArrayBuffer
 
 object Test3 {
 
@@ -46,7 +48,25 @@ object Test3 {
 
     //    val selectedData = df.select("author", "_id")
 
+    //val test = spark.sparkContext.parallelize(Seq(df))
 
+    //println(test)
+
+    //MongoSpark.save(df)
+
+    //df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
+    //    val testText2 = "<title>The Many-Valued <i> sd </i> Theorem Prover<sub>3</sub><sub>3</sub>T<sup>A</sup>P. (i) i (/i)</title>";
+    //
+    //    val testText = "<i>";
+    //    //def main(args: Array[String]): Unit = {
+    //
+    //      val text = ReplaceTagUtil.atorParse(testText2);
+    //      printf(text);
+    //      println("\n");
+    //      printf(ReplaceTagUtil.rtoaAarse(text));
+
+
+    //}
 
 //    var nameStr = df.select($"author"("_VALUE").alias("author"))
 //      //.dropDuplicates
@@ -60,11 +80,34 @@ object Test3 {
 //      .dropDuplicates
 //      .show(100)
 //
-    df.select($"author"("_VALUE"),$"_key",$"title").show(100)
+    var str = df.select($"author"("_VALUE").alias("author"),$"_key",$"title")
+      .collect()
+      .mkString
+      .toString
+      //.foreach(println)
+      //.show(100)
 
+    var newarr = wpParse(str)
+      .split("\\|")
+      .map(x => x.trim)
+      .toBuffer
 
+    var newmap = newarr.map(x => x.split("\\)"))
 
+    var myarr = ArrayBuffer[String]()
 
+    //newarr.foreach(println)
+
+    for(row <- newmap){
+      val tempArr = row(0).split(",")
+      for(it <- tempArr){
+//        val tempStr  = new StringBuilder()
+//        tempStr.+(it.trim + "," + row(1))
+        myarr += (it.trim + "," + row(1))
+      }
+    }
+
+    val b= myarr.map(x => x.split(",",2))
 
 
 //      .write.format("com.databricks.spark.xml")
@@ -72,25 +115,7 @@ object Test3 {
 //      //.show()
 
 
-    //val test = spark.sparkContext.parallelize(Seq(df))
 
-    //println(test)
-
-    //MongoSpark.save(df)
-
-    //df.rdd.saveAsTextFile("file:////Users/linmouhan/IdeaProjects/SparkExp/text1.xml")
-//    val testText2 = "<title>The Many-Valued <i> sd </i> Theorem Prover<sub>3</sub><sub>3</sub>T<sup>A</sup>P. (i) i (/i)</title>";
-//
-//    val testText = "<i>";
-//    //def main(args: Array[String]): Unit = {
-//
-//      val text = ReplaceTagUtil.atorParse(testText2);
-//      printf(text);
-//      println("\n");
-//      printf(ReplaceTagUtil.rtoaAarse(text));
-
-
-    //}
 
   }
 }
