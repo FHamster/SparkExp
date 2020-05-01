@@ -115,6 +115,7 @@ object Test3 {
       }
     }
 
+    //name id+title
 //    val b= myarr.map(x => x.split(",",2))
 //
 //    val fields = Array(StructField("author", StringType, true),
