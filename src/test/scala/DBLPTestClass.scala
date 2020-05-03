@@ -10,7 +10,7 @@ import scala.collection.mutable
 
 //本地的小规模Dataframe操作测试
 final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
-  //  val testRes: String = "src/test/resources/article_after.xml"
+  val testRes: String = "src/test/resources/article_after.xml"
   //  val testRes: String = "src/test/resources/article_CharTest.xml"
 
   //  val testRes: String = "hdfs://localhost:9000/testdata/hadoop_namenode/article_after.xml"
@@ -25,12 +25,13 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
 
   private lazy val dblpArticle: DataFrame = {
     import com.databricks.spark.xml._
-//    PropertiesObj.ManualArticleSchema.printTreeString()
+    //    PropertiesObj.ManualArticleSchema.printTreeString()
     spark.read
       //.schema(PropertiesObj.ManualArticleSchema)//手动设定schema
       .option("rootTag", "dblp")
       .option("rowTag", "article")
-      .xml(PropertiesObj.wholeDBLP_cvtSparkPath)
+      .xml(testRes)
+      //      .xml(PropertiesObj.wholeDBLP_cvtSparkPath)
       .cache()
   }
 
@@ -123,7 +124,6 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
     })
 
     println(map)
-
   }
 
   test("writh json") {
@@ -136,6 +136,11 @@ final class DBLPTestClass extends AnyFunSuite with BeforeAndAfterAll {
   test("test if there is corrupt_record") {
     assert(!dblpArticle.columns.contains("_corrupt_record"))
 
+  }
+  test("explode author array") {
+    import spark.implicits._
+    dblpArticle.select(explode($"author._VALUE") as "author2", $"_key", $"title")
+      .show(100)
   }
 
   test("write jdbc") {
