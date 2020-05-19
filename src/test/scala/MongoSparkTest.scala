@@ -56,6 +56,29 @@ class MongoSparkTest extends AnyFunSuite {
     })
 
   }
+  test("read all subnode schema") {
+    import com.databricks.spark.xml._
+    PropertiesObj.subNode.foreach(it => {
+      val ss: SparkSession = SparkSession
+        .builder
+        .appName("readAllSchema")
+        .master("local[*]")
+//        .config("spark.mongodb.output.uri", s"mongodb://127.0.0.1/SparkDBLPTest.$it")
+        .getOrCreate()
+
+      val opt = ss.read
+        .option("rootTag", "dblp")
+        .option("rowTag", it)
+        .xml(PropertiesObj.wholeDBLP_cvtSparkPath)
+      opt.show()
+      opt.printSchema()
+
+      println(s"write $it into mongodb")
+      MongoSpark.save(opt)
+      ss.stop()
+    })
+
+  }
   test("write article subnode into mongodb(use chartest)") {
     import com.databricks.spark.xml._
     val opt = spark.read
