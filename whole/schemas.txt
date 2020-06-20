@@ -1,30 +1,5 @@
 //这是所有的推测的schema打印的日志
 
-+------+--------------------+----------+---------+--------------------+---------+-----+----+--------+------+--------------------+--------------------+-----+----+------------+---------+---------+--------------------+--------------------+------+----+
-|_cdate|                _key|    _mdate|_publtype|              author|booktitle|cdrom|cite|crossref|editor|                  ee|             journal|month|note|      number|    pages|publisher|               title|                 url|volume|year|
-+------+--------------------+----------+---------+--------------------+---------+-----+----+--------+------+--------------------+--------------------+-----+----+------------+---------+---------+--------------------+--------------------+------+----+
-|  null|  journals/gc/NiuC13|2017-05-27|     null|[[Hong-Xia Niu,,]...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           3|  661-667|     null|[Linear 2-Arboric...|db/journals/gc/gc...|    29|2013|
-|  null| journals/gc/ItoKN07|2017-05-27|     null|[[Hiro Ito,,], [M...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|Supplement-1|  283-290|     null|[Semi-Distance Co...|db/journals/gc/gc...|    23|2007|
-|  null|journals/gc/Ferre...|2018-12-26|     null|[[Daniela Ferrero...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           6|1565-1580|     null|[Chorded Pancycli...|db/journals/gc/gc...|    34|2018|
-|  null| journals/gc/DingM18|2018-03-17|     null|[[Guoli Ding,,], ...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           2|  289-312|     null|[Minimal k-Connec...|db/journals/gc/gc...|    34|2018|
-|  null|journals/gc/DiaoZW14|2017-05-27|     null|[[Kefeng Diao,,],...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           4|  875-885|     null|[The Smallest One...|db/journals/gc/gc...|    30|2014|
-|  null|journals/gc/Meszk...|2017-12-14|     null|[[Mariusz Meszka,...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           6|1451-1458|     null|[Maximal Edge-Col...|db/journals/gc/gc...|    33|2017|
-|  null|journals/gc/Monte...|2017-05-27|     null|[[Luis Montejano,...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           2|  467-476|     null|[When is a Disk T...|db/journals/gc/gc...|    31|2015|
-|  null|journals/gc/Havil...|2017-05-27|     null|[[Julie Haviland,...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           2|  153-163|     null|[Rotation numbers...|db/journals/gc/gc...|     7|1991|
-|  null| journals/gc/ChenL07|2017-05-27|     null|[[Yichao Chen,,],...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           5|  521-527|     null|[Up-Embeddability...|db/journals/gc/gc...|    23|2007|
-|  null|journals/gc/AlonTW01|2018-11-14|     null|[[Noga Alon,,], [...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           1|    11-16|     null|[Linear Arboricit...|db/journals/gc/gc...|    17|2001|
-|  null|journals/gc/Amoos...|2017-05-27|     null|[[Marzieh Amoosha...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           1|    17-29|     null|[On Cayley Sum Gr...|db/journals/gc/gc...|    32|2016|
-|  null|journals/gc/Vijay...|2017-05-27|     null|[[G. R. Vijayakum...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           4|1101-1111|     null|[Some Results on ...|db/journals/gc/gc...|    29|2013|
-|  null| journals/gc/Erdos86|2017-05-27|     null|    [[Paul Erdös,,]]|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           1|  189-190|     null|[Two problems in ...|db/journals/gc/gc...|     2|1986|
-|  null|journals/gc/HouZL...|2017-06-27|     null|[[Jianfeng Hou,,]...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           2|   91-100|     null|[Total Colorings ...|db/journals/gc/gc...|    24|2008|
-|  null|journals/gc/Manso...|2017-06-06|     null|[[Toufik Mansour,...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           1|  101-109|     null|[A Comment on Rys...|db/journals/gc/gc...|    25|2009|
-|  null|journals/gc/SzaboV05|2017-05-27|     null|[[Tibor Szabó,,],...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           2|  247-261|     null|[Exact (i)k(/i)-W...|db/journals/gc/gc...|    21|2005|
-|  null|  journals/gc/Alon90|2017-05-27|     null|     [[Noga Alon,,]]|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           1|      1-4|     null|[Transversal numb...|db/journals/gc/gc...|     6|1990|
-|  null|journals/gc/Bujta...|2019-06-02|     null|[[Csilla Bujtás,,...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           6|  807-816|     null|[Smallest Set-Tra...|db/journals/gc/gc...|    25|2009|
-|  null|journals/gc/Calvi...|2017-10-11|     null|[[Gilberto Calvil...|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           6|2241-2252|     null|[New Families of ...|db/journals/gc/gc...|    32|2016|
-|  null| journals/gc/Bruyn17|2017-10-24|     null| [[Bart De Bruyn,,]]|     null| null|null|    null|  null|[[https://doi.org...|Graphs and Combin...| null|null|           5|1219-1230|     null|[On the adjacency...|db/journals/gc/gc...|    33|2017|
-+------+--------------------+----------+---------+--------------------+---------+-----+----+--------+------+--------------------+--------------------+-----+----+------------+---------+---------+--------------------+--------------------+------+----+
-only showing top 20 rows
 
 root
  |-- _cdate: string (nullable = true)
@@ -70,32 +45,6 @@ root
 write article into mongodb
 
 
-+--------------------+----------+---------+--------------------+-------------+-----+----+--------------------+------+--------------------+-----+----+------+-------+--------------------+--------------------+----+
-|                _key|    _mdate|_publtype|              author|    booktitle|cdrom|cite|            crossref|editor|                  ee|month|note|number|  pages|               title|                 url|year|
-+--------------------+----------+---------+--------------------+-------------+-----+----+--------------------+------+--------------------+-----+----+------+-------+--------------------+--------------------+----+
-|journals/corr/abs...|2018-09-12|     null|[[Bashar Igried,,...|     CoALP-Ty| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  36-51|[Trace and Stable...|db/series/eptcs/e...|2016|
-|journals/corr/abs...|2018-09-12|     null|[[Alberto Ciaffag...|         LSFA| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|109-124|[A weak HOAS appr...|db/series/eptcs/e...|2012|
-|journals/corr/Par...|2019-07-25|     null|[[Sobhan Naderi P...|ICLR (Poster)| null|null|    [conf/iclr/2015]|  null|[[http://arxiv.or...| null|null|  null|   null|[Automatic Discov...|db/conf/iclr/iclr...|2015|
-|journals/corr/Yan...|2019-07-25|     null|[[Yongxin Yang,,]...|ICLR (Poster)| null|null|    [conf/iclr/2015]|  null|[[http://arxiv.or...| null|null|  null|   null|[A Unified Perspe...|db/conf/iclr/iclr...|2015|
-|journals/corr/abs...|2018-09-12|     null|[[Nikola Benes,,]...|         PDMC| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  63-67|[CoInDiVinE: Para...|db/series/eptcs/e...|2011|
-|journals/corr/abs...|2018-09-12|     null|[[Bob Coecke,,], ...|          HPC| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  34-48|[The GHZ/W-calcul...|db/series/eptcs/e...|2010|
-|journals/corr/abs...|2019-10-19|     null|[[Haniel Barbosa,...|         PxTP| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  15-22|[Language and Pro...|db/series/eptcs/e...|2017|
-|journals/corr/Ryz...|2018-09-12|     null|[[Leonid Ryzhyk,,...|     SYNT@CAV| null|null|[journals/corr/Pi...|  null|[[https://doi.org...| null|null|  null|  84-99|[Developing a Pra...|db/series/eptcs/e...|2016|
-|journals/corr/abs...|2018-09-12|     null|[[Tarmo Uustalu,,...|         FICS| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  55-61|[Structured gener...|db/series/eptcs/e...|2012|
-|journals/corr/abs...|2019-12-27|     null|[[Elizabeth Firma...|     SYNT@CAV| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  62-80|[Performance Heur...|db/series/eptcs/e...|2017|
-|journals/corr/abs...|2019-12-02|     null|[[Rodrigo Machado...|         RULE| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  39-50|[Modeling and Rea...|db/series/eptcs/e...|2009|
-|journals/corr/abs...|2018-09-12|     null|[[Irum Rauf,,], [...|          WWV| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  77-92|[Analyzing Consis...|db/series/eptcs/e...|2012|
-|journals/corr/Has...|2018-11-02|     null|[[Vahid Hashemi,,...|       SynCoP| null|null|[journals/corr/An...|  null|[[https://doi.org...| null|null|  null|  19-33|[Probabilistic Bi...|db/series/eptcs/e...|2014|
-|journals/corr/abs...|2020-03-09|     null|[[Jeffrey O. Shal...|        WORDS| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|231-239|[The Critical Exp...|db/series/eptcs/e...|2011|
-|journals/corr/Fit...|2018-09-12|     null|[[Zack Fitzsimmon...|         TARK| null|null|[journals/corr/Ra...|  null|[[https://doi.org...| null|null|  null|127-140|[Single-Peaked Co...|db/series/eptcs/e...|2015|
-|journals/corr/abs...|2018-09-12|     null|[[Mario Gleirsche...|     FVAV@iFM| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|  75-90|[Run-Time Risk Mi...|db/series/eptcs/e...|2017|
-|journals/corr/Qui...|2018-09-12|     null|   [[David Quick,,]]|          QPL| null|null|[journals/corr/He...|  null|[[https://doi.org...| null|null|  null|307-320|[Encoding !-tenso...|db/series/eptcs/e...|2015|
-|journals/corr/abs...|2018-09-12|     null|[[Sebastian Böhne...|   ThEdu@CADE| null|null|[journals/corr/ab...|  null|[[https://doi.org...| null|null|  null|   1-18|[Learning how to ...|db/series/eptcs/e...|2017|
-|journals/corr/Iva...|2018-09-12|     null| [[Ievgen Ivanov,,]]|    SNR@ETAPS| null|null|[journals/corr/Ab...|  null|[[https://doi.org...| null|null|  null|  46-51|[On the Underappr...|db/series/eptcs/e...|2017|
-|journals/corr/Kis...|2018-09-12|     null|[[Kohei Kishida,,...|          QPL| null|null|[journals/corr/Co...|  null|[[https://doi.org...| null|null|  null|115-132|[Stochastic Relat...|db/series/eptcs/e...|2014|
-+--------------------+----------+---------+--------------------+-------------+-----+----+--------------------+------+--------------------+-----+----+------+-------+--------------------+--------------------+----+
-only showing top 20 rows
-
 root
  |-- _key: string (nullable = true)
  |-- _mdate: string (nullable = true)
@@ -137,31 +86,6 @@ root
 write inproceedings into mongodb
 
 
-+--------------------+----------+---------+-------+------+--------------------+----+--------------------+--------------------+--------------------+-------+----+------+-----+-------------+--------------------+--------------------+--------------------+------+----+
-|                _key|    _mdate|_publtype|address|author|           booktitle|cite|              editor|                  ee|                isbn|journal|note|number|pages|    publisher|              series|               title|                 url|volume|year|
-+--------------------+----------+---------+-------+------+--------------------+----+--------------------+--------------------+--------------------+-------+----+------+-----+-------------+--------------------+--------------------+--------------------+------+----+
-|journals/tplop/20...|2019-05-14|     null|   null|  null|Trans. Pattern La...|null|[[James Noble 000...|[[https://doi.org...|[[978-3-030-14290...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Transactions on P...|db/journals/tplop...| 10600|2019|
-|journals/tplop/20...|2019-05-14|     null|   null|  null|Trans. Pattern La...|null|[[James Noble 000...|[[https://doi.org...|[[978-3-642-10831...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Transactions on P...|db/journals/tplop...|  5770|2009|
-|journals/tplop/20...|2019-05-14|     null|   null|  null|Trans. Pattern La...|null|[[James Noble 000...|[[https://doi.org...|[[978-3-642-38675...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Transactions on P...|db/journals/tplop...|  7840|2013|
-|journals/tplop/20...|2019-05-14|     null|   null|  null|Trans. Pattern La...|null|[[James Noble 000...|[[https://doi.org...|[[978-3-642-19431...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Transactions on P...|db/journals/tplop...|  6510|2011|
-|journals/jods/2005-2|2019-05-14|     null|   null|  null|J. Data Semantics II|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-24208-2,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  3360|2005|
-|journals/jods/2006-5|2019-05-14|     null|   null|  null| J. Data Semantics V|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-31426-1,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  null|2006|
-|journals/jods/2007-8|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-540-70663...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  4380|2007|
-|journals/jods/200...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-540-92147...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  5383|2008|
-|journals/jods/2005-4|2019-05-14|     null|   null|  null|J. Data Semantics IV|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-31001-0,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  3730|2005|
-|journals/jods/200...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-642-10561...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  5880|2009|
-|journals/jods/2006-6|2019-05-14|     null|   null|  null|J. Data Semantics VI|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-36712-8,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  4090|2006|
-|journals/jods/2007-9|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-540-74982...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  4601|2007|
-|journals/jods/2006-7|2019-05-14|     null|   null|  null|J. Data Semantics...|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-46329-1,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  4244|2006|
-|  journals/jods/2003|2019-05-14|     null|   null|  null| J. Data Semantics I|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-20407-5,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  2800|2003|
-|journals/jods/201...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-642-22629...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  6720|2011|
-|journals/jods/2005-3|2019-05-14|     null|   null|  null|J. Data Semantics...|null|[[Stefano Spaccap...|[[https://doi.org...|  [[3-540-26225-3,]]|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  3534|2005|
-|journals/jods/200...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-642-00684...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  5480|2009|
-|journals/jods/200...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-642-03097...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  5530|2009|
-|journals/jods/200...|2019-05-14|     null|   null|  null|   J. Data Semantics|null|[[Stefano Spaccap...|[[https://doi.org...|[[978-3-540-77687...|   null|null|  null| null|[[Springer,]]|[[Lecture Notes i...|Journal on Data S...|db/journals/jods/...|  4900|2008|
-|journals/antholog...|2005-05-19|     null|   null|  null|               aDVD1|null|                null|                null|                null|   null|null|  null| null|         null|                null|The ACM SIGMOD An...|  db/about/dvd1.html|  null|2001|
-+--------------------+----------+---------+-------+------+--------------------+----+--------------------+--------------------+--------------------+-------+----+------+-----+-------------+--------------------+--------------------+--------------------+------+----+
-only showing top 20 rows
 
 root
  |-- _key: string (nullable = true)
@@ -207,31 +131,6 @@ root
  |-- year: long (nullable = true)
 
 write proceedings into mongodb
-+--------------------+----------+---------+--------------------+--------------------+-----+----+--------+--------------------+--------------------+--------------------+-----+----+---------------+-----------+------+--------------------+--------------------+--------------------+------+----+
-|                _key|    _mdate|_publtype|              author|           booktitle|cdrom|cite|crossref|              editor|                  ee|                isbn|month|note|          pages|  publisher|school|              series|               title|                 url|volume|year|
-+--------------------+----------+---------+--------------------+--------------------+-----+----+--------+--------------------+--------------------+--------------------+-----+----+---------------+-----------+------+--------------------+--------------------+--------------------+------+----+
-|   conf/RelMiCS/2003|2019-05-14|     null|                null|Theory and Applic...| null|null|    null|[[Harrie C. M. de...|[[https://doi.org...|  [[3-540-20780-5,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Theory and Applic...|db/conf/RelMiCS/t...|  2929|2003|
-|conf/RelMiCS/2006...|2019-05-14|     null|                null|Theory and Applic...| null|null|    null|[[Harrie C. M. de...|[[https://doi.org...|  [[3-540-69223-1,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Theory and Applic...|db/conf/RelMiCS/t...|  4342|2006|
-| conf/ausdm/2006lncs|2019-05-14|     null|                null|                null| null|null|    null|[[Graham J. Willi...|[[https://doi.org...|  [[3-540-32547-6,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Data Mining - The...|db/conf/ausdm/lnc...|  3755|2006|
-|conf/lopstr/2004lncs|2019-05-14|     null|                null|Program Developme...| null|null|    null|[[Maurice Bruynoo...|[[https://doi.org...|  [[3-540-22152-2,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Program Developme...|db/conf/lopstr/ln...|  3049|2004|
-|      conf/nips/1996|2019-09-25|     null|                null|Neural Networks: ...| null|null|    null|[[Genevieve B. Or...|[[https://doi.org...|  [[3-540-65311-2,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Neural Networks: ...|db/conf/nips/nips...|  1524|1998|
-|conf/propertytest...|2019-05-14|     null|                null|    Property Testing| null|null|    null|[[Oded Goldreich ...|[[https://doi.org...|[[978-3-642-16366...| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Property Testing ...|db/conf/propertyt...|  6390|2010|
-|     conf/maude/2007|2019-05-14|     null|                null|     All About Maude| null|null|    null|[[Manuel Clavel,]...|[[https://doi.org...|[[978-3-540-71940...| null|null|           null|[Springer,]|  null|[Lecture Notes in...|All About Maude -...|db/conf/maude/mau...|  4350|2007|
-|   conf/dis/2007book|2019-05-14|     null|                null|Computational Dis...| null|null|    null|[[Saso Dzeroski,]...|[[https://doi.org...|[[978-3-540-73919...| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Computational Dis...|db/conf/dis/book2...|  4660|2007|
-|       conf/mww/2003|2019-05-14|     null|                null|Modelling with Words| null|null|    null|[[Jonathan Lawry,...|[[https://doi.org...|  [[3-540-20487-3,]]| null|null|           null|[Springer,]|  null|[Lecture Notes in...|Modelling with Wo...|db/conf/mww/mww20...|  2873|2003|
-|series/acvpr/978-...|2019-03-07|     null|                null|                null| null|null|    null|[[Santiago Aja-Fe...|[[https://doi.org...|[[978-1-84882-298...| null|null|           null|[Springer,]|  null|[Advances in Patt...|Tensors in Image ...|db/series/acvpr/t...|  null|2009|
-|series/acvpr/978-...|2017-05-16|     null|                null|Similarity-Based ...| null|null|    null|[[Marcello Pelill...|[[https://doi.org...|[[978-1-4471-5627...| null|null|           null|[Springer,]|  null|[Advances in Comp...|Similarity-Based ...|db/series/acvpr/s...|  null|2013|
-|series/acvpr/978-...|2017-05-16|     null|[[Chris Aldrich,,...|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-4471-5184...| null|null|           null|[Springer,]|  null|[Advances in Comp...|Unsupervised Proc...|                null|  null|2013|
-|series/acvpr/978-...|2017-05-16|     null|    [[Stan Z. Li,,]]|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-84800-278...| null|null|           null|[Springer,]|  null|[Advances in Patt...|Markov Random Fie...|                null|  null|2009|
-|series/acvpr/978-...|2019-06-11|     null|                null|Context-Enhanced ...| null|null|    null|[[Lauro Snidaro,]...|[[https://doi.org...|[[978-3-319-28969...| null|null|           null|[Springer,]|  null|[Advances in Comp...|Context-Enhanced ...|db/series/acvpr/f...|  null|2016|
-|series/acvpr/Ione...|2017-08-10|     null|[[Radu Tudor Ione...|                null| null|null|    null|                null|[[https://doi.org...|[[978-3-319-30365...| null|null|        [1-246]|[Springer,]|  null|[Advances in Comp...|Knowledge Transfe...|                null|  null|2016|
-|series/acvpr/978-...|2019-10-03|     null|                null|Deep Learning and...| null|null|    null|[[Le Lu 0001,], [...|[[https://doi.org...|[[978-3-319-42998...| null|null|           null|[Springer,]|  null|[Advances in Comp...|Deep Learning and...|db/series/acvpr/l...|  null|2017|
-|series/acvpr/Toen...|2017-05-16|     null|[[Klaus D. Tönnie...|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-4471-7318...| null|null|        [1-578]|[Springer,]|  null|[Advances in Comp...|Guide to Medical ...|                null|  null|2017|
-|series/acvpr/978-...|2017-05-16|     null|[[Lee Middleton,,...|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-85233-914...| null|null|[I-XIII, 1-254]|[Springer,]|  null|[Advances in Patt...|Hexagonal Image P...|                null|  null|2005|
-|series/acvpr/978-...|2017-05-16|     null|[[Gabor T. Herman...|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-85233-617...| null|null|  [I-XI, 1-297]|[Springer,]|  null|[Advances in Patt...|Fundamentals of C...|                null|  null|2009|
-|series/acvpr/978-...|2017-05-16|     null|[[Nanning Zheng,,...|                null| null|null|    null|                null|[[https://doi.org...|[[978-1-84882-311...| null|null| [I-XVI, 1-365]|[Springer,]|  null|[Advances in Patt...|Statistical Learn...|                null|  null|2009|
-+--------------------+----------+---------+--------------------+--------------------+-----+----+--------+--------------------+--------------------+--------------------+-----+----+---------------+-----------+------+--------------------+--------------------+--------------------+------+----+
-only showing top 20 rows
 
 root
  |-- _key: string (nullable = true)
@@ -281,31 +180,6 @@ root
  |-- year: long (nullable = true)
 
 write book into mongodb
-+--------------------+----------+---------+--------------------+--------------------+-----+-------+----+--------------------+--------------------+----+------+-------+---------+--------------------+--------------------+----+
-|                _key|    _mdate|_publtype|              author|           booktitle|cdrom|chapter|cite|            crossref|                  ee|note|number|  pages|publisher|               title|                 url|year|
-+--------------------+----------+---------+--------------------+--------------------+-----+-------+----+--------------------+--------------------+----+------+-------+---------+--------------------+--------------------+----+
-|conf/lilog/Maienb...|2017-05-26|     null|[[Claudia Maienbo...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  73-90|     null|Motivation einer ...|db/conf/lilog/ont...|1992|
-| conf/lilog/KloseP92|2017-05-26|     null|[[Gudrun Klose,],...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|   3-22|     null|Die Modellierung ...|db/conf/lilog/ont...|1992|
-|conf/lilog/KloseMM92|2017-05-26|     null|[[Gudrun Klose,],...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|213-216|     null|Kommentar zu P. G...|db/conf/lilog/ont...|1992|
-|conf/lilog/RohrigN92|2017-05-26|     null|[[Ralf Röhrig,], ...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|167-170|     null|Kommentar zu T. B...|db/conf/lilog/ont...|1992|
-| conf/lilog/Gerstl92|2017-05-26|     null|   [[Peter Gerstl,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  95-99|     null|Kommentar zu C. M...|db/conf/lilog/ont...|1992|
-|  conf/lilog/Novak92|2017-05-26|     null|[[Hans-Joachim No...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|106-112|     null|Die LILOG-Ontolog...|db/conf/lilog/ont...|1992|
-|  conf/lilog/Dobes92|2017-05-26|     null|[[Zuzana Krifka D...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|113-122|     null|Linking Linguisti...|db/conf/lilog/ont...|1992|
-| conf/lilog/Borkel92|2017-05-26|     null| [[Manfred Börkel,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|217-230|     null|Vom ersten LILOG-...|db/conf/lilog/ont...|1992|
-|  conf/lilog/Lang92a|2017-05-26|     null|     [[Ewald Lang,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|100-105|     null|Kommentar zu den ...|db/conf/lilog/ont...|1992|
-|   conf/lilog/Lang92|2017-05-26|     null|     [[Ewald Lang,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  23-45|     null|Linguistische vs....|db/conf/lilog/ont...|1992|
-|conf/lilog/Gerstl92a|2017-05-26|     null|   [[Peter Gerstl,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|201-212|     null|Praxisgerechte Ve...|db/conf/lilog/ont...|1992|
-|conf/lilog/Simmon...|2017-05-26|     null|[[Geoffrey Simmon...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|125-154|     null|Empirical Methods...|db/conf/lilog/ont...|1992|
-| conf/lilog/Geurts92|2017-05-26|     null|    [[Bart Geurts,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  91-94|     null|Linguistic Knowle...|db/conf/lilog/ont...|1992|
-| conf/lilog/Lorenz92|2017-05-26|     null|    [[Sven Lorenz,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|171-178|     null|Erfahrungen mit d...|db/conf/lilog/ont...|1992|
-|conf/lilog/Pirlein92|2017-05-26|     null| [[Thomas Pirlein,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|196-198|     null|Kommentar zu B. G...|db/conf/lilog/ont...|1992|
-|conf/lilog/Simmons92|2017-05-26|     null|[[Geoffrey Simmon...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  46-54|     null|Kommentar zu Ewal...|db/conf/lilog/ont...|1992|
-|conf/lilog/Gangle...|2017-05-26|     null|[[Barbara Gängler...|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|179-195|     null|Antwortgenerierun...|db/conf/lilog/ont...|1992|
-|conf/lilog/Bollin...|2017-05-26|     null| [[Toni Bollinger,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|155-166|     null|Verarbeitung von ...|db/conf/lilog/ont...|1992|
-|   conf/lilog/Luck92|2017-05-26|     null|   [[Kai von Luck,]]|Ontologie und Axi...| null|   null|null|     conf/lilog/1992|[[https://doi.org...|null|  null|  55-69|     null|Wissenrepräsentat...|db/conf/lilog/ont...|1992|
-|conf/RelMiCS/Sami...|2019-06-02|     null|[[Susanne Saminge...|Theory and Applic...| null|   null|null|conf/RelMiCS/2006...|[[https://doi.org...|null|  null|334-354|     null|The Dominance Rel...|db/conf/RelMiCS/t...|2006|
-+--------------------+----------+---------+--------------------+--------------------+-----+-------+----+--------------------+--------------------+----+------+-------+---------+--------------------+--------------------+----+
-only showing top 20 rows
 
 root
  |-- _key: string (nullable = true)
@@ -338,31 +212,6 @@ root
  |-- year: long (nullable = true)
 
 write incollection into mongodb
-+--------------------+----------+---------+--------------------+--------------------+--------------------+-----+----+------+---------------+---------+--------------------+--------------------+--------------------+------+------+
-|                _key|    _mdate|_publtype|              author|                  ee|                isbn|month|note|number|          pages|publisher|              school|              series|               title|volume|  year|
-+--------------------+----------+---------+--------------------+--------------------+--------------------+-----+----+------+---------------+---------+--------------------+--------------------+--------------------+------+------+
-|series/faia/2005-148|2020-01-31|     null|[[Kristian Kersti...|[[http://www.book...| [978-1-58603-674-4]| null|null|  null|        [1-228]|IOS Press|[University of Fr...|[Frontiers in Art...|An Inductive Logi...|   148|[2005]|
-|series/lnbip/Weber09|2020-02-12|     null|[[Ingo M. Weber, ...|[[https://doi.org...|[978-3-642-05084-...| null|null|  null|        [3-231]| Springer|[Karlsruhe Instit...|[Lecture Notes in...|Semantic Methods ...|    40|[2009]|
-|books/daglib/0068994|2017-01-09|     null|  [[Ulrich Junker,]]|[[http://d-nb.inf...|                null| null|null|  null|  [I-VI, 1-187]|     null|[Kaiserslautern U...|                null|Relationships bet...|  null|[1992]|
-|books/daglib/0069997|2016-11-08|     null|[[Johannes Reicha...|[[http://d-nb.inf...|                null| null|null|  null|        [1-120]|     null|[Darmstadt Univer...|                null|Invarianz der Par...|  null|[1985]|
-|books/daglib/0073843|2020-02-12|     null|[[Joachim Steinba...|[[http://kbibmp3....|                null| null|null|  null|[I-VIII, 1-288]|     null|[Kaiserslautern U...|                null|Termination of re...|  null|[1994]|
-|books/daglib/0012771|2011-03-23|     null|    [[Robert Cori,]]|                null|                null| null|null|  null|           null|     null|   [Univ. Paris VII]|                null|Un code pour les ...|  null|[1973]|
-|books/daglib/0098648|2020-01-30|     null|[[Christiane Stut...|[[http://d-nb.inf...| [978-3-89601-210-4]| null|null|  null| [I-XII, 1-148]|    Infix|[Technical Univer...|[DISKI, db/series...|Anwendungsspezifi...|   210|[1999]|
-|books/daglib/0091856|2016-10-05|     null|[[Christian Schei...|[[http://d-nb.inf...|                null| null|null|  null|   [I-X, 1-202]|     null|[University of Pa...|                null|Universal routing...|  null|[1996]|
-|books/daglib/0069992|2011-03-23|     null|     [[Klaus Gims,]]|                null|                null| null|null|  null|         [1-56]|     null|      [TH Darmstadt]|                null|Messung empirisch...|  null|[1977]|
-|books/daglib/0018044|2011-03-23|     null|    [[Stefan Kral,]]|                null|                null| null|null|  null|        [1-166]|     null|[Technische Unive...|                null|FFT specific comp...|  null|[2006]|
-|books/daglib/0097143|2019-07-10|     null|    [[Jakob Rehof,]]|                null|                null| null|null|  null|           null|     null|[University of Co...|[Technical report...|The complexity of...| 98/19|[1998]|
-|books/daglib/0008628|2017-01-09|     null|     [[Ralf Hinze,]]|[[http://d-nb.inf...|                null| null|null|  null|   [I-X, 1-227]|     null|[University of Bo...|                null|Projection-based ...|  null|[1995]|
-|books/daglib/0080400|2020-03-04|     null|[[Thomas Hoppe 00...|[[http://d-nb.inf...| [978-3-89601-097-1]| null|null|  null|  [I-XI, 1-190]|    Infix|[Technical Univer...|[DISKI, db/series...|Incremental parti...|    97|[1995]|
-|books/daglib/0087091|2016-10-04|     null|[[Daniel Curatolo,]]|[[http://d-nb.inf...|                null| null|null|  null|        [1-140]|     null|[University of Pa...|                null|Wissensbasierte M...|  null|[1996]|
-|books/daglib/0020508|2011-03-23|     null|[[Esther Kaufmann,]]|                null|                null| null|null|  null|           null|     null|[Universität Zurich]|                null|Talking to the se...|  null|[2007]|
-|books/daglib/0084473|2017-01-11|     null|   [[Detlef Plump,]]|[[http://d-nb.inf...|                null| null|null|  null|  [I-VI, 1-119]|     null|[University of Br...|                null|Evaluation of fun...|  null|[1993]|
-|books/daglib/0084322|2019-07-10|     null| [[David W. Opitz,]]|                null|                null| null|null|  null|  [I-IX, 1-137]|     null|[University of Wi...|[Technical Report...|An anytime approa...|  1281|[1995]|
-|books/daglib/0008591|2016-12-21|     null|[[Christoph Brzos...|[[http://d-nb.inf...|                null| null|null|  null|  [I-VI, 1-172]|     null|[Karlsruhe Instit...|                null|Temporal-logische...|  null|[1993]|
-|books/daglib/0069932|2016-10-13|     null|[[Hans-Detlef Sch...|[[http://d-nb.inf...|                null| null|null|  null|        [1-130]|     null|[Darmstadt Univer...|                null|Zellularautomaten...|  null|[1981]|
-|books/daglib/0092879|2020-01-30|     null| [[Stefan Schrödl,]]|[[http://d-nb.inf...| [978-3-89601-181-7]| null|null|  null|  [I-XI, 1-173]|    Infix|[University of Fr...|[DISKI, db/series...|Negation as failu...|   181|[1998]|
-+--------------------+----------+---------+--------------------+--------------------+--------------------+-----+----+------+---------------+---------+--------------------+--------------------+--------------------+------+------+
-only showing top 20 rows
 
 root
  |-- _key: string (nullable = true)
@@ -398,22 +247,7 @@ root
  |    |-- element: long (containsNull = true)
 
 write phdthesis into mongodb
-+-------------------+----------+--------------------+--------------------+--------------------+--------------------+--------------------+----+
-|               _key|    _mdate|              author|                  ee|                note|              school|               title|year|
-+-------------------+----------+--------------------+--------------------+--------------------+--------------------+--------------------+----+
-|phd/ndltd/Pontes11a|2019-07-26|Rodrigo Pastl Pontes|[[http://www.bd.b...|[ndltd.org (oai:a...|Instituto Tecnoló...|Contribuições do ...|2011|
-|  phd/ndltd/Coorg94|2019-07-16|     Satyan R. Coorg|[[http://hdl.hand...|[ndltd.org (oai:d...|Massachusetts Ins...|Partitioning non-...|1994|
-|       phd/VanRoy84|2002-01-03|       Peter Van Roy|                null|                null|University of Cal...|A Prolog Compiler...|1984|
-|      phd/Schulte92|2017-12-26|Christian Schulte...|                null|                null|Universität Karls...|Entwurf und Imple...|1991|
-|   phd/hal/Perchy13|2017-01-11|        Salim Perchy|[[https://tel.arc...|                null|Pontifical Xavier...|Multimedia Intera...|2013|
-|       phd/Ylonen94|2002-01-03|         Tatu Ylönen|                null|                null|Helsinki Universi...|Shadow Paging Is ...|1994|
-|     ms/Vollmer2006|2018-06-13|     Stephan Vollmer|[[http://dbis.uni...|                null|Diplomarbeit, Uni...|Portierung des DB...|2006|
-|       ms/Klaas2007|2020-03-12|    Vanessa C. Klaas|[[http://www.pms....|                null|Diplomarbeit, LMU...|Who's Who in the ...|2007|
-|         ms/Brown92|2018-06-13|       Kurt P. Brown|                null|                null|University of Wis...|PRPL: A Database ...|1992|
-|         ms/Yurek97|2018-06-13|         Tolga Yurek|                null|                null|University of Cal...|Efficient View Ma...|1997|
-|         ms/Ley2006|2020-03-12|            Rita Ley|[[http://dblp.uni...|                null|Diplomarbeit, Uni...|Der Einfluss klei...|2006|
-|    ms/Hoffmann2008|2020-03-12|Oliver Hoffmann 0002|[[http://dblp.uni...|[Diplomarbeit, Un...| University of Trier|Regelbasierte Ext...|2009|
-+-------------------+----------+--------------------+--------------------+--------------------+--------------------+--------------------+----+
+
 
 root
  |-- _key: string (nullable = true)
@@ -431,31 +265,6 @@ root
  |-- year: long (nullable = true)
 
 write mastersthesis into mongodb
-+------------------+----------+---------+--------------------+----+--------+------+----+----+---------+----+----+
-|              _key|    _mdate|_publtype|              author|cite|crossref|editor|  ee|note|    title| url|year|
-+------------------+----------+---------+--------------------+----+--------+------+----+----+---------+----+----+
-| homepages/16/1530|2009-06-09|     null|    [[Sungwoo Ahn,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/7175|2009-07-21|     null| [[Arees Qamareen,]]|null|    null|  null|null|null|Home Page|null|null|
-|homepages/16/10052|2011-09-02|     null|[[Mehrdad Jangjou,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/9584|2011-05-17|     null|  [[Kang-Wook Kim,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/8834|2010-12-13|     null|[[Gene P. Danilen...|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/5506|2009-06-10|     null|     [[A. Scheuer,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/8030|2010-04-30|     null| [[John Jeffy Lin,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/6993|2009-06-10|     null|  [[Franca Debole,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/9864|2011-07-12|     null| [[Darleen DeRosa,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/4377|2009-06-10|     null|   [[Herman Chang,]]|null|    null|  null|null|null|Home Page|null|null|
-|homepages/16/10035|2011-08-31|     null| [[Shang-Chih Liu,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/2727|2009-06-09|     null|[[Elizabeth D. Bo...|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/7320|2009-09-14|     null|  [[Barbara Adams,]]|null|    null|  null|null|null|Home Page|null|null|
-|homepages/16/10621|2011-12-16|     null|[[Steve Mansfield...|null|    null|  null|null|null|Home Page|null|null|
-|homepages/16/10182|2011-09-23|     null|    [[Wan-Te Chen,]]|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/7192|2009-07-29|     null|   [[Sandra Braun,]]|null|    null|  null|null|null|Home Page|null|null|
-|homepages/16/10514|2011-11-24|     null|[[Nobuhito Maruya...|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/5074|2009-06-10|     null|[[Jani-Pekka Joki...|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/5226|2009-06-10|     null|[[Michael Schüßle...|null|    null|  null|null|null|Home Page|null|null|
-| homepages/16/9435|2012-11-09|     null| [[Ghasem Alipoor,]]|null|    null|  null|null|null|Home Page|null|null|
-+------------------+----------+---------+--------------------+----+--------+------+----+----+---------+----+----+
-only showing top 20 rows
 
 root
  |-- _key: string (nullable = true)
