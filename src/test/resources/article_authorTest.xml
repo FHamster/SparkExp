@@ -5,8 +5,6 @@
 <dblp>
     <article mdate="&#174;&#38;2018-01-07" key="&#174;&#60;&#62;&#160;tr/meltdown/m18" publtype="informal">
         <author>Moritz&#174; Lipp</author>
-        <author orcid="0000-0002-1551-7438">Fahad Khan</author>
-        <author aux="12asd">Michael Schwarz asd 0001</author>
         <author>Michael Schwarz 0001</author>
         <author>Daniel Gruss</author>
         <author>Thomas Prescher 0002</author>
@@ -60,8 +58,5 @@
             Engineering, University of California, Berkeley.
         </note>
     </article>
-    <www mdate="2018-08-24" key="homepages/208/1496">
-        <author>Tamas Pilissy</author>
-        <title>Home Page</title>
-    </www>
+
 </dblp>
