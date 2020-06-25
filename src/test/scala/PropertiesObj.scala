@@ -16,8 +16,8 @@ object PropertiesObj {
     "phdthesis",
     "mastersthesis",
     "www",
-    "person",
-    "data"
+//    "person",
+//    "data"
   )
 
   //手工设定的article schema
@@ -74,7 +74,7 @@ root
  |-- volume: string (nullable = true)
  |-- year: long (nullable = true)
  */
-  val ManualArticleSchema = new StructType(Array(
+  val articleSchema:StructType = new StructType(Array(
     StructField("_cdate", StringType, nullable = true),
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
@@ -118,7 +118,9 @@ root
     StructField("number", StringType, nullable = true),
     StructField("pages", StringType, nullable = true),
     StructField("publisher", StringType, nullable = true),
-    StructField("title", StructType(Array(
+    //人工设定表
+    StructField("title", StringType, nullable = true),
+/*    StructField("title", StructType(Array(
       StructField("_VALUE", StringType, nullable = true),
       StructField("_bibtex", StringType, nullable = true),
       /*
@@ -138,27 +140,26 @@ root
         )), containsNull = true)
       ),
       */
-    )), nullable = true),
+    )), nullable = true),*/
     StructField("url", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
     StructField("year", StringType, nullable = true) //long 或 string
   ))
 
-
-  val InproceedingsSchema = new StructType(Array(
+  val inproceedingsSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("author", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_aux", StringType, nullable = true),
-        StructField("_orcid", StringType, nullable = true)
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("booktitle", StringType, nullable = true),
     StructField("cdrom", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
     StructField("cite", ArrayType(
       StructType(Array(
@@ -166,8 +167,8 @@ root
         StructField("_label", StringType, nullable = true)
       )), containsNull = true)
     ),
-    StructField("crossref",  ArrayType(
-      StringType,containsNull = true
+    StructField("crossref", ArrayType(
+      StringType, containsNull = true
     )),
     StructField("editor", ArrayType(
       StructType(Array(
@@ -183,9 +184,9 @@ root
     ),
     StructField("month", StringType, nullable = true),
     StructField("note", StructType(Array(
-        StructField("_VALUE", StringType, nullable = true),
-        StructField("_type", StringType, nullable = true)
-      )), nullable = true),
+      StructField("_VALUE", StringType, nullable = true),
+      StructField("_type", StringType, nullable = true)
+    )), nullable = true),
     StructField("number", StringType, nullable = true),
     StructField("pages", StringType, nullable = true),
     StructField("title", StructType(Array(
@@ -196,12 +197,18 @@ root
     StructField("year", LongType, nullable = true)
   ))
 
-  val ProceedingsSchema = new StructType(Array(
+  val proceedingsSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("address", StringType, nullable = true),
-    StructField("author", StringType, nullable = true),
+    StructField("author", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
+      )), containsNull = true)
+    ),
     StructField("booktitle", StringType, nullable = true),
     StructField("cite", ArrayType(
       StructType(Array(
@@ -254,15 +261,15 @@ root
     StructField("year", LongType, nullable = true)
   ))
 
-  val BookSchema = new StructType(Array(
+  val bookSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("author", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_bibtex", StringType, nullable = true),
-        StructField("_orcid", StringType, nullable = true)
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("booktitle", StringType, nullable = true),
@@ -294,37 +301,38 @@ root
     ),
     StructField("month", StringType, nullable = true),
     StructField("note", StructType(Array(
-        StructField("_VALUE", StringType, nullable = true),
-        StructField("_type", StringType, nullable = true)
-      )), nullable = true),
+      StructField("_VALUE", StringType, nullable = true),
+      StructField("_type", StringType, nullable = true)
+    )), nullable = true),
     StructField("pages", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
     StructField("publisher", StructType(Array(
       StructField("_VALUE", StringType, nullable = true),
       StructField("_href", StringType, nullable = true)
     )), nullable = true),
     StructField("school", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
-    StructField("series",StructType(Array(
-        StructField("_VALUE", StringType, nullable = true),
-        StructField("_href", StringType, nullable = true)
-      )), nullable = true),
+    StructField("series", StructType(Array(
+      StructField("_VALUE", StringType, nullable = true),
+      StructField("_href", StringType, nullable = true)
+    )), nullable = true),
     StructField("title", StringType, nullable = true),
     StructField("url", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
     StructField("year", LongType, nullable = true)
   ))
 
-  val IncollectionSchema = new StructType(Array(
+  val incollectionSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("author", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_orcid", StringType, nullable = true)
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("booktitle", StringType, nullable = true),
@@ -343,7 +351,7 @@ root
         StructField("_type", StringType, nullable = true)
       )), containsNull = true)
     ),
-    StructField("note",StringType, nullable = true),
+    StructField("note", StringType, nullable = true),
     StructField("pages", StringType, nullable = true),
     StructField("publisher", StructType(Array(
       StructField("_VALUE", StringType, nullable = true),
@@ -354,14 +362,15 @@ root
     StructField("year", LongType, nullable = true)
   ))
 
-  val PhdthesisSchema = new StructType(Array(
+  val phdthesisSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("author", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_orcid", StringType, nullable = true)
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("ee", ArrayType(
@@ -371,21 +380,21 @@ root
       )), containsNull = true)
     ),
     StructField("isbn", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
     StructField("month", StringType, nullable = true),
-    StructField("note",ArrayType(
+    StructField("note", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
         StructField("_type", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("pages", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
     StructField("publisher", StringType, nullable = true),
     StructField("school", ArrayType(
-      StringType,containsNull = true
+      StringType, containsNull = true
     )),
     StructField("series", StructType(Array(
       StructField("_VALUE", StringType, nullable = true),
@@ -394,14 +403,20 @@ root
     StructField("title", StringType, nullable = true),
     StructField("volume", StringType, nullable = true),
     StructField("year", ArrayType(
-      LongType,containsNull = true
+      LongType, containsNull = true
     )),
   ))
 
-  val MastersthesisSchema = new StructType(Array(
+  val mastersthesisSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
-    StructField("author", StringType, nullable = true),
+    StructField("author", ArrayType(
+      StructType(Array(
+        StructField("_VALUE", StringType, nullable = true),
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
+      )), containsNull = true)
+    ),
     StructField("ee", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
@@ -417,14 +432,16 @@ root
     StructField("year", LongType, nullable = true),
   ))
 
-  val IntoSchema = new StructType(Array(
+  // 我猜这是www的schema，记得改改。——改好了
+  val wwwSchema = new StructType(Array(
     StructField("_key", StringType, nullable = true),
     StructField("_mdate", StringType, nullable = true),
     StructField("_publtype", StringType, nullable = true),
     StructField("author", ArrayType(
       StructType(Array(
         StructField("_VALUE", StringType, nullable = true),
-        StructField("_bibtex", StringType, nullable = true)
+        StructField("_orcid", StringType, nullable = true),
+        StructField("_aux", StringType, nullable = true)
       )), containsNull = true)
     ),
     StructField("cite", ArrayType(
@@ -454,7 +471,7 @@ root
 
 
   def main(args: Array[String]): Unit = {
-    PropertiesObj.InproceedingsSchema.printTreeString()
+    //    PropertiesObj.InproceedingsSchema.printTreeString()
   }
 }
 
